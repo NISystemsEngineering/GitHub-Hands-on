@@ -7,7 +7,7 @@ Go to https://desktop.github.com/ and download the appropriate version for your 
 ## 1.1 Initialize a new Repository
 To begin, we will create a new repository on our GitHub account.
 - From the splash screen, select "Create new repository"
-![Create new repository](images/createNewRepository.png)
+![Create new repository](images/createNewRepository.PNG)
 
 
 ## 1.2 Checking the Status
