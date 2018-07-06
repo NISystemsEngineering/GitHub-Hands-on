@@ -28,6 +28,51 @@ To begin, we will create a new repository on our GitHub account.
 	
 	9. Go to your GitHub page online and observe the files that were created. A shortcut from Github Desktop to launch Github in a browser is **Repository >> View on Github (CTRL + SHIFT + G)**.
 
+[Reorganized new 1.2 and 1.3 cover original material 1.2-1.8]
+## 1.2 Adding a File and Committing
+Create a LabVIEW file and add it (commit it) to your local Github server. [Confusing to talk about local server?]
+1. Create a new simple LabVIEW VI in your local repository folder called Hello World.vi.
+
+![alt text](src/images/Hello World.png?raw=true "Hello World.vi")
+
+2. In Github Desktop, see in the Changes tab that the new file has been detected, but not yet committed.
+
+![alt text](src/images/New VI.png?raw=true "New VI Detected")
+
+3. To commit the file to the repo:
+
+	1. A summary is required.
+	
+	2. The description, which is optional, can be used to add more details about the commit.
+	
+	3. Click "Commit to master" to complete the commit.
+	
+	![alt text](src/images/New File Commit.png?raw=true "Commit New File")
+	
+## 1.3 Committing Changes
+1. Make a change to the Hello World LabVIEW VI you created in 1.3. For example, change the string constant to a string control and connect the string control to the connector pane.
+
+![alt text](src/images/Hello World Mod FP.png?raw=true "Front Panel of Hello World.vi")
+![alt text](src/images/Hello World Mod BD.png?raw=true "Block Diagram of Hello World.vi")
+
+2. GitHub Desktop will automatically detect the changes made in the LabVIEW VI. These changes will be staged in the Changes tab. The yellow dot icon indicates that changes have been made to the file.
+
+![alt text](src/images/Change VI.png?raw=true "Changes Reflected By Yellow Dot Icon")
+
+3. Create another new LabVIEW VI, Simple Add.vi. From GitHub Desktop staged changes, you will be able to see that the new file is also automatically detected and will show up with a green plus icon to indicate that it is a new file.
+
+4. Commit the changes. Multiple changes can be committed together or separately. Use the checkboxes beside each staged difference in the Changes tab to select which changes you would like to commit.
+
+	1. Commit only the change to the Hello World VI by unchecking the checkbox next to the Simple Add VI. Add summary and description and click "Commit to master".
+	
+	![alt text](src/images/Commit Hello World Change.png?raw=true "Commit Changes to Hello World.vi")
+	
+	2. Commit the remaining change, which is adding Simple Add VI to the repo.
+	
+	![alt text](src/images/Commit Simple Add.png?raw=true "Commit New VI Simple Add.vi")
+	
+Master is by default the name of the main branch of the repo. Branches will be expanded on in a later section. {Is this TMI too early?]
+	
 ## 1.2 Checking the Status
 ## 1.3 Adding a File and Committing
 ## 1.4 Adding Changes
