@@ -28,6 +28,7 @@ To begin, we will create a new repository on our GitHub account.
 	
 	9. Go to your GitHub page online and observe the files that were created. A shortcut from GitHub Desktop to view the repo online in a browser is **Repository >> View on GitHub (CTRL+SHIFT+G)**.
 
+
 ## 1.2 Adding a File and Committing
 Create a new file and commit it.
 1. Create a new simple LabVIEW VI in your local repository folder called "Hello World.vi".
