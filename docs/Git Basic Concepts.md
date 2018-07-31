@@ -100,7 +100,7 @@ Creating a branch creates a parallel version of the **master** (primary) branch.
 	
 	3. Notice that the commit button now reads **Commit to Third-Sum-Edit**, instead of **Commit to master**. Commit to the branch.
 
-## 1.6 Pull Requests and Committing Branch Changes
+## 1.6 Publishing Your Repository to GitHub.com
 You have already heard of GitHub.com, where you created your GitHub account. Up until this point, what we have been doing is using the version control software Git to track changes on our computer. This makes our computer into a Git server. The files still only exist in one place: On our machine.
 
 GitHub.com is a web-based hosting service that we can push repositories to. This explores additional benefits of using Git besides change tracking, such as:
@@ -111,7 +111,11 @@ GitHub.com is a web-based hosting service that we can push repositories to. This
 
 ![alt text](src/images/Current Branch.png? "Publish Repository to GitHub.com")
 
-2. Notice the top bar now says **Fetch origin** with a time.
+Now, a copy of your repository (your project folder) has been pushed to the GitHub servers and is accessible to the public via GitHub.com. Go to your GitHub page online and observe the files that were created. A shortcut from GitHub Desktop to view the repo online in a browser is **Repository >> View on GitHub (CTRL+SHIFT+G)**.
+
+
+
+
 	
 ## 1.2 Checking the Status
 ## 1.3 Adding a File and Committing
