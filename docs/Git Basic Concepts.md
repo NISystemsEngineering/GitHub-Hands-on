@@ -111,11 +111,17 @@ GitHub.com is a web-based hosting service that we can push repositories to. This
 
 ![alt text](src/images/Current Branch.png? "Publish Repository to GitHub.com")
 
-Now, a copy of your repository (your project folder) has been pushed to the GitHub servers and is accessible to the public via GitHub.com. Go to your GitHub page online and observe the files that were created. A shortcut from GitHub Desktop to view the repo online in a browser is **Repository >> View on GitHub (CTRL+SHIFT+G)**.
+Now, a copy of your repository (your project folder) has been "pushed" to the GitHub servers and is accessible to the public via GitHub.com. Go to your GitHub page online and observe the files that were created. A shortcut from GitHub Desktop to view the repo online in a browser is **Repository >> View on GitHub (CTRL+SHIFT+G)**. Now that it is hosted on GitHub.com, additional changes can be pushed from you as well as other users of GitHub. We will cover how to manage access and conflicting changes in a later section.
 
+## 1.7 Pushing, Fetching, and Pulling
 
+Notice the top bar now says **Fetch origin** with a time. Fetching means getting the latest changes from an online repository, and staging the differences in the **Changes** tab of GitHub Desktop. You can then decide whether you would like to merge that into your local repository (local copy). Note that fetching is different from pulling (**Respository >> Pull**), in that pulling fetches changes AND merges them at the same time.
 
+If you are working on a project with multiple users making changes, you can see how it is very crucial that you pull from the main repository that everyone is working from before starting your own changes (e.g. adding a feature or fixing a bug). Otherwise, you may not be working with the most up-to-date version of the project. We will illustrate this by making a change in the repository hosted on GitHub.com and seeing how fetching and pulling look in the GitHub Desktop application on your computer following these changes.
 
+1. Launch your repository page on GitHub.com in a browser. You can either navigate to this from GitHub.com, or from GitHub Desktop, use **Repository >> View on GitHub** (CTRL+SHIFT+G).
+
+2. We will edit the "README.md" file, GitHub.com provides a built-in text editing tool. This simulates a change to the repo that may have been pushed by another user. Click on "README.md" and then click the pencil icon on the right that launches the GitHub.com text editor. The file extension ".md" stands for Markdown, a lightweight markup language.
 	
 ## 1.2 Checking the Status
 ## 1.3 Adding a File and Committing
