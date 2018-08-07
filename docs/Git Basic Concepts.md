@@ -132,7 +132,7 @@ Up until this point we have explored how to pull the most up-to-date version of 
 
 Allowing multiple users to push to a single remote repo in this manner will very quickly start to get messy. It creates the possibility of overwriting someone else's changes. Next, we introduce branches and pull requests as methods to control access to a repo and organize changes made by multiple users working on one repo.
 
-## 1.8 Branches and Pull Requests
+## 1.8 Branches
 Creating a branch creates a parallel version of the **master** (primary or default) branch. Making changes in this new branch will not disrupt the master branch, and the changes made in the new branch can be merged back into the master branch when the developer is ready.
 1. Create a new branch from GitHub Desktop with **Branch >> New branch** (CTRL+SHIFT+N). It will ask for a name, call it "Third-Sum-Edit". This will be the branch in which we add a new feature: Add a third number to the summation in Simple Add.vi.
 
@@ -150,4 +150,31 @@ Creating a branch creates a parallel version of the **master** (primary or defau
 	
 	3. Notice that the commit button now reads **Commit to Third-Sum-Edit**, instead of **Commit to master**. Commit to the branch.
 
-4. From the **Current Branch** menu on the top bar, switch back to **master** branch and view the **History** tab. There, you can confirm that these changes we committed to the branch are not reflected in the **master** branch. Be sure to switch back to **Third-Sum-Edit** branch before continuing, as we want to keep working in this branch.
+4. From the **Current Branch** menu on the top bar, switch back to **master** branch and view the **History** tab. There, you can confirm that these changes we committed to the branch are not reflected in the **master** branch. Be sure to switch back to **Third-Sum-Edit** branch before continuing, as we want to keep working in this branch. Note that we can only switch branches when all changes have been committed (no changes are staged).
+
+5. Publish branch to GitHub.com with the **Publish branch** button. Then, go to the online repo and you will be able to see from Code >> 2 branches that your new branch is now present in this repo as well. However, it is still separate from the master branch. You will have to merge the Third-Sum-Edit branch with the master branch for the changes to be reflected there.
+
+## 1.9 Merging Branches and Pull Requests
+If we are the owners of the repo, we can merge our new branch directly with the **master** branch without additional review. This would be done with the following procedure:
+
+1. Navigate to the **master** branch. Note that it is very important that you do this from the **master** branch, so that the **master** remains the primary/default branch.
+
+2. Use **Branch >> Merge into current branch** (CTRL+SHIFT+M).
+
+3. Select **Third-Sum-Edit** branch, which merges the changes made int he branch back into the **master** branch.
+
+However, if multiple users have multiple branches, merging them all without a gatekeeping review process could result in issues, such as unwanted changes or overwriting someone else's work. We therefore want to create a pull request, which requests a merge with the master branch, and the merge will not be completed without approval from one of the repo's approvers.
+
+1. Confirm from **Current branch** in the top bar in GitHub Desktop that you are currently in the branch you want to create the pull request for, in this case, **Third-Sum-Edit**.
+
+2. Go to **Branch >> Create pull request** (CTRL+R). This launches the pull request page in GitHub.com. Note that the branch must be pushed before a pull request can be made, so that all changes you've made on the branch locally are also reflected in the GitHub.com copy of the branch. In this case, we have not made changes since publishing the branch to GitHub.com, so we do not need to push.
+
+3. The **Open a pull request** page should show that you are requesting a merge of **Third-Sum-Edit** into **master**. This means the **base:** is **master** and the **compare:** is **Third-Sum-Edit**.
+
+![](../src/images/Merge_Branch.png "Confirm that you are merging the changes in Third-Sum-Edit into the master branch.")
+
+4. Select **Create pull request**. See that this creates a forum where reviewer comments can be added. You can continue working and committing more changes to the pull request until it is approved by an approver, the pull request will update to reflect these additional commits as long as you continue to push them.
+
+5. In this case, we are owners of the repo, so we have reviewer privileges. Therefore, we are able to **Merge the pull request** on our own, and you can go ahead and do so. If you did not have reviewer privileges, the option would be disabled, as shown below.
+
+![](../src/images/Review_Req.png "Merge will be disabled if you do not have approver privileges for the repo.")
