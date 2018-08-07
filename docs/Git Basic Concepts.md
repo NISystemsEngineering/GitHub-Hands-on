@@ -82,9 +82,54 @@ We can view information on past commits from GitHub Desktop.
 2. Commit description.
 3. A unique ID is created for every commit. This is sometimes called the SHA or the hash.
 
-## 1.5 Branching Out and Switching Branches
-Creating a branch creates a parallel version of the **master** (primary) branch. Making changes in this new branch will not disrupt the master branch, and the changes made in the new branch will be merged back into the master branch when the developer is ready.
-1. Create a new branch from GitHub Desktop with **Branch >> New branch** (CTRL+SHIFT+N). It will ask for a name, call it "Third-Sum-Edit". This will be the branch in which we add a new feature: Add a third number to the summation in Simple Add.vi
+## 1.5 Publishing Your Repository to GitHub.com
+You have already heard of GitHub.com, where you created your GitHub account. Up until this point, what we have been doing is using the version control software Git to track changes on our computer. This makes our computer into a Git server. The files still only exist in one place: On our machine.
+
+GitHub.com is a web-based hosting service that we can push repositories to. This explores additional benefits of using Git besides change tracking, such as:
+* Create backups of our work.
+* Coordinate multiple users working on one project.
+
+1. Click **Publish repository** to publish your repository to GitHub.com. GitHub desktop offers the option to keep your code private, but uncheck this, as private repos are only available to paying users on GitHub.com. Your repo will be viewable to the public after it is uploaded to the GitHub.com servers.
+
+![](../src/images/Current_Branch.png "Publish Repository to GitHub.com")
+
+Now, a copy of your repository (your project folder) has been "pushed" to the GitHub servers and is accessible to the public via GitHub.com. Go to your GitHub page online and observe the files that were created. A shortcut from GitHub Desktop to view the repo online in a browser is **Repository >> View on GitHub (CTRL+SHIFT+G)**. Now that it is hosted on GitHub.com, additional changes can be pushed from you as well as other users of GitHub. We will next cover how to manage access and conflicting changes.
+
+## 1.6 Fetching and Pulling
+Notice the top bar now says **Fetch origin** with a time. Fetching means detecting the latest changes from an online repo, but it does not automatically merge these changes into the local repo. With the "last fetched" time, GitHub Desktop is indicating to us the time that it last connected with the GitHub.com repository. When it detects changes, it will give you the option to pull. Pulling (**Repository >> Pull**) will take changes from the remote online repo and apply them to your local repo files.
+
+If you are working on a project with multiple users making changes, you can see how it is very crucial that you pull from the main repository that everyone is working from before starting your own changes (e.g. adding a feature or fixing a bug). Otherwise, you may not be working with the most up-to-date version of the project. We will illustrate this by making a change in the repository hosted on GitHub.com and seeing how pulling looks in the GitHub Desktop application on your computer following these changes.
+
+1. Launch your repository page on GitHub.com in a browser. You can either navigate to this from GitHub.com, or from GitHub Desktop, use **Repository >> View on GitHub** (CTRL+SHIFT+G).
+
+2. We will edit the "README.md" file. GitHub.com provides a built-in text editing tool. This simulates a change to the repo that may have been pushed by another user. Click on "README.md" and then click the pencil icon on the right that launches the GitHub.com text editor. The file extension ".md" stands for Markdown, a lightweight markup language.
+
+![](../src/images/Edit_in_GitHub.png "Edit Markdown file in GitHub")
+
+3. Add text to the "README.md" file and commit your changes with the box below the editor. Note that we are still working in the branch **Third-Sum-Edit**.
+
+4. Go back to GitHub Desktop. You will see that the button that previously said **Fetch origin** now says **Pull origin**. Click this to apply the change to your local repo.
+
+![](../src/images/Pull_Origin.png "Pull From Remote Repo")
+
+5. Navigate to the "README.md" file on your computer and open it. You will see that the changes you made in GitHub.com are now reflected in this copy of the file as well. You can also see from the **History** tab that the revision has been added to the list of commits for the branch.
+
+## 1.7 Pushing
+Up until this point we have explored how to pull the most up-to-date version of the remote repo onto your computer. The next step is to make a change to your local repo and push it back to the remote repo.
+
+1. Open "README.md" in your local repo. Add text to the file and save the changes.
+
+2. From GitHub Desktop, commit the changes.
+
+3. Use the **Push origin** button to push changes to the remote repo.
+
+4. Open the repo hosted on GitHub.com (CTRL+SHIFT+G) and see that the changes you made are reflected in the "README.md" file there.
+
+Allowing multiple users to push to a single remote repo in this manner will very quickly start to get messy. It creates the possibility of overwriting someone else's changes. Next, we introduce branches and pull requests as methods to control access to a repo and organize changes made by multiple users working on one repo.
+
+## 1.8 Branches and Pull Requests
+Creating a branch creates a parallel version of the **master** (primary or default) branch. Making changes in this new branch will not disrupt the master branch, and the changes made in the new branch can be merged back into the master branch when the developer is ready.
+1. Create a new branch from GitHub Desktop with **Branch >> New branch** (CTRL+SHIFT+N). It will ask for a name, call it "Third-Sum-Edit". This will be the branch in which we add a new feature: Add a third number to the summation in Simple Add.vi.
 
 ![](../src/images/New_Branch_Third-Sum-Edit.png "Create New Branch")
 
@@ -100,28 +145,7 @@ Creating a branch creates a parallel version of the **master** (primary) branch.
 	
 	3. Notice that the commit button now reads **Commit to Third-Sum-Edit**, instead of **Commit to master**. Commit to the branch.
 
-## 1.6 Publishing Your Repository to GitHub.com
-You have already heard of GitHub.com, where you created your GitHub account. Up until this point, what we have been doing is using the version control software Git to track changes on our computer. This makes our computer into a Git server. The files still only exist in one place: On our machine.
-
-GitHub.com is a web-based hosting service that we can push repositories to. This explores additional benefits of using Git besides change tracking, such as:
-* Create backups of our work.
-* Coordinate multiple users working on one project.
-
-1. Click **Publish repository** to publish your repository to GitHub.com. GitHub desktop offers the option to keep your code private, but uncheck this, as private repos are only available to paying users on GitHub.com. Your repo will be viewable to the public after it is uploaded to the GitHub.com servers.
-
-![](../src/images/Current_Branch.png "Publish Repository to GitHub.com")
-
-Now, a copy of your repository (your project folder) has been "pushed" to the GitHub servers and is accessible to the public via GitHub.com. Go to your GitHub page online and observe the files that were created. A shortcut from GitHub Desktop to view the repo online in a browser is **Repository >> View on GitHub (CTRL+SHIFT+G)**. Now that it is hosted on GitHub.com, additional changes can be pushed from you as well as other users of GitHub. We will cover how to manage access and conflicting changes in a later section.
-
-## 1.7 Pushing, Fetching, and Pulling
-
-Notice the top bar now says **Fetch origin** with a time. Fetching means getting the latest changes from an online repository, and staging the differences in the **Changes** tab of GitHub Desktop. You can then decide whether you would like to merge that into your local repository (local copy). Note that fetching is different from pulling (**Repository >> Pull**), in that pulling fetches changes AND merges them at the same time.
-
-If you are working on a project with multiple users making changes, you can see how it is very crucial that you pull from the main repository that everyone is working from before starting your own changes (e.g. adding a feature or fixing a bug). Otherwise, you may not be working with the most up-to-date version of the project. We will illustrate this by making a change in the repository hosted on GitHub.com and seeing how fetching and pulling look in the GitHub Desktop application on your computer following these changes.
-
-1. Launch your repository page on GitHub.com in a browser. You can either navigate to this from GitHub.com, or from GitHub Desktop, use **Repository >> View on GitHub** (CTRL+SHIFT+G).
-
-2. We will edit the "README.md" file, GitHub.com provides a built-in text editing tool. This simulates a change to the repo that may have been pushed by another user. Click on "README.md" and then click the pencil icon on the right that launches the GitHub.com text editor. The file extension ".md" stands for Markdown, a lightweight markup language.
+4. From the **Current Branch** menu on the top bar, switch back to **master** branch and view the **History** tab. There, you can confirm that these changes we committed to the branch are not reflected in the **master** branch. Be sure to switch back to **Third-Sum-Edit** branch before continuing, as we want to keep working in this branch.
 	
 ## 1.2 Checking the Status
 ## 1.3 Adding a File and Committing
