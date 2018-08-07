@@ -33,11 +33,11 @@ To begin, we will create a new repository on our GitHub account.
 Create a new file and commit it.
 1. Create a new simple LabVIEW VI in your local repository folder called "Hello World.vi".
 
-![alt text](src/images/Hello World.png? "Hello World.vi")
+![](../src/images/Hello_World_BD.png "Hello World.vi")
 
 2. In Github Desktop, see in the Changes tab that the new file has been detected, but not yet committed.
 
-![alt text](src/images/New VI.png? "New VI Detected")
+![](../src/images/New_VI.png "New VI Detected")
 
 3. To commit the file to the repo:
 
@@ -47,18 +47,18 @@ Create a new file and commit it.
 	
 	3. Click **Commit to master** to complete the commit.
 	
-	![alt text](src/images/New File Commit.png? "Commit New File")
+	![](../src/images/New_File_Commit.png "Commit New File")
 	
 ## 1.3 Committing Changes
 A commit is change to a file or set of files, it can be thought of as a revision.
 1. Make a change to the Hello World LabVIEW VI you created in 1.3. For example, change the string constant to a string control and connect the string control to the connector pane.
 
-![alt text](src/images/Hello World Mod FP.png? "Front Panel of Hello World.vi")
-![alt text](src/images/Hello World Mod BD.png? "Block Diagram of Hello World.vi")
+![](../src/images/Hello_World_Mod_FP.png "Front Panel of Hello World.vi")
+![](../src/images/Hello_World_Mod_BD.png "Block Diagram of Hello World.vi")
 
 2. GitHub Desktop will automatically detect the changes made in the LabVIEW VI. These changes will be staged in the **Changes** tab. The yellow dot icon indicates that changes have been made to the file.
 
-![alt text](src/images/Change VI.png? "Changes Reflected By Yellow Dot Icon")
+![](../src/images/Change_VI.png "Changes Reflected By Yellow Dot Icon")
 
 3. Create another new LabVIEW VI, "Simple Add.vi". From GitHub Desktop staged changes, you will be able to see that the new file is also automatically detected and will show up with a green plus icon to indicate that it is a new file.
 
@@ -66,17 +66,17 @@ A commit is change to a file or set of files, it can be thought of as a revision
 
 	1. Commit **only** the change to "Hello World.vi" by unchecking the checkbox next to the "Simple Add.vi". Add summary and description and click **Commit to master**.
 	
-	![alt text](src/images/Commit Hello World Change.png? "Commit Changes to Hello World.vi")
+	![](../src/images/Commit_Hello_World_Change.png "Commit Changes to Hello World.vi")
 	
 	2. Commit the remaining change, which adds "Simple Add.vi" to the repo.
 	
-	![alt text](src/images/Commit Simple Add.png? "Commit New VI Simple Add.vi")
+	![](../src/images/Commit_Simple_Add.png "Commit New VI Simple Add.vi")
 	
 ## 1.4 History
 We can view information on past commits from GitHub Desktop.
 1. Click the **History** tab in GitHub Desktop and click on a commit to get more details about it.
 
-![alt text](src/images/History.png? "History in GitHub Desktop")
+![](../src/images/History.png "History in GitHub Desktop")
 
 1. Commit summary.
 2. Commit description.
@@ -86,21 +86,21 @@ We can view information on past commits from GitHub Desktop.
 Creating a branch creates a parallel version of the **master** (primary) branch. Making changes in this new branch will not disrupt the master branch, and the changes made in the new branch will be merged back into the master branch when the developer is ready.
 1. Create a new branch from GitHub Desktop with **Branch >> New branch** (CTRL+SHIFT+N). It will ask for a name, call it "Third-Sum-Edit". This will be the branch in which we add a new feature: Add a third number to the summation in Simple Add.vi
 
-![alt text](src/images/New Branch Third-Sum-Edit.png? "Create New Branch")
+![](../src/images/New_Branch_Third-Sum-Edit.png "Create New Branch")
 
 2. Add a third number to the calculation in LabVIEW VI Simple Add.vi.
 
-![alt text](src/images/Third Sum Edit Simple Add.png? "Add Third Addend to Simple Add VI")
+![](../src/images/Third_Sum_Edit_Simple_Add.png "Add Third Addend to Simple Add VI")
 
 3. Commit the changes to the branch.
 	1. Check that you are in the correct branch from the top menu that reads "**Current branch**. It is very important that we commit to the correct branch, as committing to the **master** branch will edit the primary copy, and that may affect the other users accessing it.
 	2. Add a summary and description for the commit.
 	
-	![alt text](src/images/Commit to Third-Sum-Edit.png? "Commit changes to Simple Add VI to the new branch Third-Sum-Edit.")
+	![](../src/images/Commit_Third-Sum-Edit.png "Commit changes to Simple Add VI to the new branch Third-Sum-Edit.")
 	
 	3. Notice that the commit button now reads **Commit to Third-Sum-Edit**, instead of **Commit to master**. Commit to the branch.
 
-## 1.6 Pull Requests and Committing Branch Changes
+## 1.6 Publishing Your Repository to GitHub.com
 You have already heard of GitHub.com, where you created your GitHub account. Up until this point, what we have been doing is using the version control software Git to track changes on our computer. This makes our computer into a Git server. The files still only exist in one place: On our machine.
 
 GitHub.com is a web-based hosting service that we can push repositories to. This explores additional benefits of using Git besides change tracking, such as:
@@ -109,9 +109,19 @@ GitHub.com is a web-based hosting service that we can push repositories to. This
 
 1. Click **Publish repository** to publish your repository to GitHub.com. GitHub desktop offers the option to keep your code private, but uncheck this, as private repos are only available to paying users on GitHub.com. Your repo will be viewable to the public after it is uploaded to the GitHub.com servers.
 
-![alt text](src/images/Current Branch.png? "Publish Repository to GitHub.com")
+![](../src/images/Current_Branch.png "Publish Repository to GitHub.com")
 
-2. Notice the top bar now says **Fetch origin** with a time.
+Now, a copy of your repository (your project folder) has been "pushed" to the GitHub servers and is accessible to the public via GitHub.com. Go to your GitHub page online and observe the files that were created. A shortcut from GitHub Desktop to view the repo online in a browser is **Repository >> View on GitHub (CTRL+SHIFT+G)**. Now that it is hosted on GitHub.com, additional changes can be pushed from you as well as other users of GitHub. We will cover how to manage access and conflicting changes in a later section.
+
+## 1.7 Pushing, Fetching, and Pulling
+
+Notice the top bar now says **Fetch origin** with a time. Fetching means getting the latest changes from an online repository, and staging the differences in the **Changes** tab of GitHub Desktop. You can then decide whether you would like to merge that into your local repository (local copy). Note that fetching is different from pulling (**Repository >> Pull**), in that pulling fetches changes AND merges them at the same time.
+
+If you are working on a project with multiple users making changes, you can see how it is very crucial that you pull from the main repository that everyone is working from before starting your own changes (e.g. adding a feature or fixing a bug). Otherwise, you may not be working with the most up-to-date version of the project. We will illustrate this by making a change in the repository hosted on GitHub.com and seeing how fetching and pulling look in the GitHub Desktop application on your computer following these changes.
+
+1. Launch your repository page on GitHub.com in a browser. You can either navigate to this from GitHub.com, or from GitHub Desktop, use **Repository >> View on GitHub** (CTRL+SHIFT+G).
+
+2. We will edit the "README.md" file, GitHub.com provides a built-in text editing tool. This simulates a change to the repo that may have been pushed by another user. Click on "README.md" and then click the pencil icon on the right that launches the GitHub.com text editor. The file extension ".md" stands for Markdown, a lightweight markup language.
 	
 ## 1.2 Checking the Status
 ## 1.3 Adding a File and Committing
