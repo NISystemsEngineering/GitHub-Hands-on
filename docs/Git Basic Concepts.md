@@ -87,6 +87,8 @@ We can view information on past commits from GitHub Desktop.
 2. Commit description.
 3. A unique ID is created for every commit. This is sometimes called the SHA or the hash.
 
+Right-clicking on an item in the **History** tab gives you the option to revert the commit. This should be used with caustion, as it undoes all changes since the previous commit, reverting your files back to a previous version. This option is also available via right-click from changes staged in the **Changes** tab.
+
 ## 1.5 Publishing Your Repository to GitHub.com
 You have already heard of GitHub.com, where you created your GitHub account. Up until this point, what we have been doing is using the version control software Git to track changes on our computer. This makes our computer into a Git server. The files still only exist in one place: On our machine.
 
@@ -178,3 +180,7 @@ However, if multiple users have multiple branches, merging them all without a ga
 5. In this case, we are owners of the repo, so we have reviewer privileges. Therefore, we are able to **Merge the pull request** on our own, and you can go ahead and do so. If you did not have reviewer privileges, the option would be disabled, as shown below.
 
 ![](../src/images/Review_Req.png "Merge will be disabled if you do not have approver privileges for the repo.")
+
+Congratulations! You now know the basics of using Git source control with GitHub.com and GitHub Desktop.
+
+2.0 Using LabVIEW and Git
