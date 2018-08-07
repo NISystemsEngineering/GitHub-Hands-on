@@ -183,8 +183,9 @@ However, if multiple users have multiple branches, merging them all without a ga
 
 Congratulations! You now know the basics of using Git source control with GitHub.com and GitHub Desktop.
 
-2.0 Using LabVIEW and Git
+## 2.0 Using LabVIEW and Git
 There are a few things to be aware of when using LabVIEW with Git.
-**Setting to not compile code
-**Avoid merging
-**Keep files separate (use subVIs)
+
+* Setting to not compile code
+* Avoid merging
+* Keep files separate (use subVIs)
