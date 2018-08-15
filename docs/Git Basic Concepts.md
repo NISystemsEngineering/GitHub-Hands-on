@@ -188,4 +188,15 @@ There are a few things to be aware of when using LabVIEW with Git.
 
 * Setting to not compile code
 * Avoid merging
-* Keep files separate (use subVIs)
+* Keep files separate (use subVIs) "encapsulation"
+* Communication, GitHub issues (link these in commits), LabVIEW bookmarks
+
+Facilitating Source Control by Separating Compiled Code from VIs and Other File Types
+http://zone.ni.com/reference/en-XX/help/371361R-01/lvconcepts/saving_vis_compiled_code/
+
+Best Practices for Code Packaging in LabVIEW
+ftp://ftp.ni.com/pub/branches/us/Dev%20Days/best_practices_code_packaging_labview.pdf
+
+Software Configuration Management and LabVIEW
+http://www.ni.com/white-paper/4114/en/
+Does not mention Git.
