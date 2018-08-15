@@ -181,6 +181,8 @@ However, if multiple users have multiple branches, merging them all without a ga
 
 ![](../src/images/Review_Req.png "Merge will be disabled if you do not have approver privileges for the repo.")
 
+6. Once you have merged the changes from **Third-Sum-Edit** into **master**, you can navigate to the **branches** tab and delete **Third-Sum-Edit**. A branch should be tied to a specific feature addition, bug fix, etc. Once this has been completed, it should be deleted and new branch started for the next section of work.
+
 Congratulations! You now know the basics of using Git source control with GitHub.com and GitHub Desktop.
 
 ## 2.0 Using LabVIEW and Git
