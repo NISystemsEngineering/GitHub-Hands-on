@@ -188,17 +188,99 @@ Congratulations! You now know the basics of using Git source control with GitHub
 ## 2.0 Using LabVIEW and Git
 There are a few things to be aware of when using LabVIEW with Git.
 
-* Setting to not compile code
-* Avoid merging
-* Keep files separate (use subVIs) "encapsulation"
-* Communication, GitHub issues (link these in commits), LabVIEW bookmarks
+## Separating Compiled Code from VIs
 
-Facilitating Source Control by Separating Compiled Code from VIs and Other File Types
-http://zone.ni.com/reference/en-XX/help/371361R-01/lvconcepts/saving_vis_compiled_code/
+By default, a VI stores two types of code together:
+* Graphical source code that you edit in the LabVIEW development environment
+* Compiled code that LabVIEW uses to run the VI
 
-Best Practices for Code Packaging in LabVIEW
-ftp://ftp.ni.com/pub/branches/us/Dev%20Days/best_practices_code_packaging_labview.pdf
+When you make changes to a VI in the development environment, LabVIEW automatically recompiles the code to reflect the changes you have made, and does the same for all calling VIs as well.
 
-Software Configuration Management and LabVIEW
-http://www.ni.com/white-paper/4114/en/
-Does not mention Git.
+This becomes a problem if you make changes to a subVI when using source control. Since all calling VIs will also be recompiled, Git will detect changes in the binary code of those files. These will be reflected as uncommitted changes, even when you haven't actually made LabVIEW code changes to the calling VIs.
+
+Fortunately, there is a way to separate compiled code from the source code of a VI.
+
+**Project Properties >> Project >> Separate compiled code from new project items**. Use **Mark Existing Items** to select which existing items you would like to have separated compiled code.
+
+![](../src/images/Sep_Compiled_Code.png "Set this so that new project items are automatically set to separate their compiled code.")
+
+When you check this option, LabVIEW will store the compiled code separately, in a compiled object cache on your local machine, rather than in the VI file that is in the repository. This enables Git to accurately detect which VIs have had code changes made to them.
+
+This option should not be used when you are intending to run or load the VI with the LabVIEW Run-Time Engine. The Run-Time Engine cannot handle source-only VIs because it has no access to the compiled object cache.
+
+Keep in mind that it is always recommended to deliver source code with an export and not by copying project folders. Read [Best Practices for Code Packaging in LabVIEW](ftp://ftp.ni.com/pub/branches/us/Dev%20Days/best_practices_code_packaging_labview.pdf) for more information.
+
+Resources:
+
+* [Facilitating Source Control by Separating Compiled Code from VIs and Other File Types](http://zone.ni.com/reference/en-XX/help/371361R-01/lvconcepts/saving_vis_compiled_code/)
+* [Separating Compiled Code from VIs and Other File Types](http://zone.ni.com/reference/en-XX/help/371361P-01/lvhowto/separate_compiled_code/)
+* [Best Practices for Code Packaging in LabVIEW](ftp://ftp.ni.com/pub/branches/us/Dev%20Days/best_practices_code_packaging_labview.pdf)
+
+### Avoid Merging
+
+We have discussed merging a branch into the master branch, but what about merging changes to one file when two users have simultaneously made changes?
+
+While troublesome, there are tools to compare these sorts of conflicting changes in text-based coding. With graphical coding, this kind of file merge will present a larger challenge.
+
+![](../src/images/MergeBattle.png "Issues arise when two users make changes to the same file.")
+
+Merge "battles" should therefore be prevented whenever possible by avoiding simultaneous conflicting changes to the same file by multiple users. There are a few methods to prevent this.
+
+1. Code Organization
+
+By splitting code into different files, simultaneous development on one file can be more easily avoided. Use subVIs to separate code.
+
+Bad:
+
+![](../src/images/SpagCode.png "Gross.")
+
+Good:
+
+![](../src/images/GoodSubVICode.png "Well-organized, separated code that enables multiple users to work on one application simultaneously.")
+
+See that in the "good" example, the code is separated in subVIs by function:
+* Application control, handles unexpected errors
+* Receive remote commands with network streams
+* Data acquisition engine
+* Analyze data and check trig conditions
+* Write TDMS files to disk, manage hard drive
+* Periodically broadcast system health
+* Send tags and wfms to remote client
+* Check for hanging threads
+
+Since these subVIs are in different files, they can be worked on simultaneously, and all users would still be working on improvements to the overall application.
+
+2. Communication
+
+Communicate to project members to understand who is assigned each change that must be made. Accidentally making changes to the same file due to miscommunication will result in a merge battle. There are some tools to better organize your team.
+
+Use GitHub Issues to track and assign changes. Go to your repository page on GitHub.com. From the Issues tab, you can create and assign specific issues to members of the team.
+
+It is best practice to tag in your commits the issue(s) that it addresses. GitHub Desktop will allow you to tag issues directly from either the **Subject** or **Description** of your commit.
+
+Once the issue has been created in GitHub.com, ensure that your local repo is synced with the online repo (recall that this is done with **Fetch Origin**). Then, you will be able to tag the issue by typing, for example, "Issue #3". Click on the issue to insert the tag.
+
+![](../src/images/TagIssue.png "Well-organized, separated code that enables multiple users to work on one application simultaneously.")
+
+An additional tool that can be used is LabVIEW bookmarks.
+
+Bookmarks are created by the # tag in a free label, object label, wire label, or subdiagram label. Below, the tag "#NOTE: Report, put don't pass error. Run every command."" has been created.
+
+![](../src/images/BookmarkEx.png "Create a bookmark with the # tag.")
+
+All bookmarks can be viewed in the Bookmark Manager. This can even be launched from a project, which displays bookmarks in all VIs in the project.
+**View >> Bookmark Manager**
+
+![](../src/images/BookmarkManager.png "View all bookmarks.")
+
+Come up with a system to help other team members easily identify fixes that must be made within existing LabVIEW code. In the above system, these tags are used for the following functions:
+* **#BUG** denotes where an issue may be referring to
+* **#NOTE** are notes about the program that may be helpful to other developers
+* **#TODO** denotes where additional code should be added in the future
+
+Resources
+* [Bookmark Manager](http://zone.ni.com/reference/en-XX/help/371361K-01/lvdialog/bkmk_manager_moreinfo/)
+* [5 Things You Need to Know About LabVIEW Bookmarks](https://forums.ni.com/t5/LabVIEW-News/5-Things-You-Need-to-Know-About-LabVIEW-Bookmarks/ba-p/3486903)
+
+## Additional Resources
+* [GitHub Glossary](https://help.github.com/articles/github-glossary/)
