@@ -258,7 +258,7 @@ Use GitHub Issues to track and assign changes. Go to your repository page on Git
 
 It is best practice to tag in your commits the issue(s) that it addresses. GitHub Desktop will allow you to tag issues directly from either the **Subject** or **Description** of your commit.
 
-Once the issue has been created in GitHub.com, ensure that your local repo is synced with the online repo (recall that this is done with **Fetch Origin**). Then, you will be able to tag the issue by typing, for example, "Issue #3". Click on the issue to insert the tag.
+Once the issue has been created in GitHub.com, ensure that your local repo is synced with the online repo (recall that this is done with **Fetch Origin**). Then, you will be able to tag the issue by typing #. This will bring up a list of the issues. Click on the relevant issue to insert the tag.
 
 ![](../src/images/TagIssue.png "Well-organized, separated code that enables multiple users to work on one application simultaneously.")
 
