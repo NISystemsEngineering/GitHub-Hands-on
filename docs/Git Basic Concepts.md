@@ -52,13 +52,13 @@ To begin, we will create a new repository on our GitHub account.
 *.lvlps
 ```
 
-## 1.2 Adding a File and Committing
+## 1.2 Adding a File to the Repo (Initial Commit)
 Create a new file and commit it.
 1. Create a new simple LabVIEW VI in your local repository folder called "Hello World.vi".
 
 ![](../src/images/Hello_World_BD.png "Hello World.vi")
 
-2. In Github Desktop, see in the Changes tab that the new file has been detected, but not yet committed.
+2. In Github Desktop, see in the Changes tab that the new file has been detected, but not yet committed. The green plus indicates that the file is new to the repo.
 
 ![](../src/images/New_VI.png "New VI Detected")
 
@@ -99,7 +99,7 @@ A commit is change to a file or set of files, it can be thought of as a revision
 We can view information on past commits from GitHub Desktop.
 1. Click the **History** tab in GitHub Desktop and click on a commit to get more details about it.
 
-![](../src/images/History.png "History in GitHub Desktop")
+![](../src/images/History_Numbered.png "History in GitHub Desktop")
 
 1. Commit summary.
 2. Commit description.
