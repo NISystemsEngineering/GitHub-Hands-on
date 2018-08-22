@@ -30,9 +30,6 @@ To begin, we will create a new repository on our GitHub account.
 	7. Select **Create Repository**.
 	
 	8. Navigate to the local folder on your computer and observe the files that were created. The shortcut for this from GitHub Desktop is **Repository >> Show in Explorer (CTRL+SHIFT+F)**.
-	
-	9. Go to your GitHub page online and observe the files that were created. A shortcut from GitHub Desktop to view the repo online in a browser is **Repository >> View on GitHub (CTRL+SHIFT+G)**.
-
 
 ## 1.2 Adding a File and Committing
 Create a new file and commit it.
