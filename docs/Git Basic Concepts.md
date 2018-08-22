@@ -31,6 +31,27 @@ To begin, we will create a new repository on our GitHub account.
 	
 	8. Navigate to the local folder on your computer and observe the files that were created. The shortcut for this from GitHub Desktop is **Repository >> Show in Explorer (CTRL+SHIFT+F)**.
 
+	9. Confirm that repository is set to not track the LabVIEW-associated files mentioned in step 5. Go to **Repository >> Repository Settings >> Ignored Files**. This is displaying the contents of the .gitignore file and should contain the following:
+
+```
+# Libraries
+*.lvlibp
+*.llb
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+
+# Metadata
+*.aliases
+*.lvlps
+```
+
 ## 1.2 Adding a File and Committing
 Create a new file and commit it.
 1. Create a new simple LabVIEW VI in your local repository folder called "Hello World.vi".
