@@ -5,10 +5,6 @@ If you don't already have a GitHub account, go to https://github.com and create 
 ### Download GitHub Desktop
 Go to https://desktop.github.com/ and download the appropriate version for your OS.
 
-TEST
-Test image by relative path in same directory as this file.
-![](test_image.png "she used to drink water")
-
 ## 1.1 Initialize a new Repository
 To begin, we will create a new repository on our GitHub account.
 1. From the splash screen or the **File** menu, select **Create new repository**
