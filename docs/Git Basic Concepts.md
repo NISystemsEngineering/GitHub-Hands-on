@@ -95,7 +95,7 @@ A commit is change to a file or set of files, it can be thought of as a revision
 We can view information on past commits from GitHub Desktop.
 1. Click the **History** tab in GitHub Desktop and click on a commit to get more details about it.
 
-![](../src/images/History_Numbered.PNG "History in GitHub Desktop")
+![](../src/images/History_Numbered.png "History in GitHub Desktop")
 
 1. Commit summary.
 2. Commit description.
@@ -216,7 +216,7 @@ Fortunately, there is a way to separate compiled code from the source code of a 
 
 **Project Properties >> Project >> Separate compiled code from new project items**. Use **Mark Existing Items** to select which existing items you would like to have separated compiled code.
 
-![](../src/images/Sep_Compiled_Code.PNG "Set this so that new project items are automatically set to separate their compiled code.")
+![](../src/images/Sep_Compiled_Code.png "Set this so that new project items are automatically set to separate their compiled code.")
 
 When you check this option, LabVIEW will store the compiled code separately, in a compiled object cache on your local machine, rather than in the VI file that is in the repository. This enables Git to accurately detect which VIs have had code changes made to them.
 
@@ -236,7 +236,7 @@ We have discussed merging a branch into the master branch, but what about mergin
 
 While troublesome, there are tools to compare these sorts of conflicting changes in text-based coding. With graphical coding, this kind of file merge will present a larger challenge.
 
-![](../src/images/MergeBattle.PNG "Issues arise when two users make changes to the same file.")
+![](../src/images/MergeBattle.png "Issues arise when two users make changes to the same file.")
 
 Merge "battles" should therefore be prevented whenever possible by avoiding simultaneous conflicting changes to the same file by multiple users. There are a few methods to prevent this.
 
@@ -246,11 +246,11 @@ By splitting code into different files, simultaneous development on one file can
 
 Bad:
 
-![](../src/images/SpagCode.PNG "Gross.")
+![](../src/images/SpagCode.png "Gross.")
 
 Good:
 
-![](../src/images/GoodSubVICode.PNG "Well-organized, separated code that enables multiple users to work on one application simultaneously.")
+![](../src/images/GoodSubVICode.png "Well-organized, separated code that enables multiple users to work on one application simultaneously.")
 
 See that in the "good" example, the code is separated in subVIs by function:
 * Application control, handles unexpected errors
@@ -280,12 +280,12 @@ An additional tool that can be used is LabVIEW bookmarks.
 
 Bookmarks are created by the # tag in a free label, object label, wire label, or subdiagram label. Below, the tag "#NOTE: Report, put don't pass error. Run every command."" has been created.
 
-![](../src/images/BookmarkEx.PNG "Create a bookmark with the # tag.")
+![](../src/images/BookmarkEx.png "Create a bookmark with the # tag.")
 
 All bookmarks can be viewed in the Bookmark Manager. This can even be launched from a project, which displays bookmarks in all VIs in the project.
 **View >> Bookmark Manager**
 
-![](../src/images/BookmarkManager.PNG "View all bookmarks.")
+![](../src/images/BookmarkManager.png "View all bookmarks.")
 
 Come up with a system to help other team members easily identify fixes that must be made within existing LabVIEW code. In the above system, these tags are used for the following functions:
 * **#BUG** denotes where an issue may be referring to
