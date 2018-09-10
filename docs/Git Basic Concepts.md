@@ -7,7 +7,7 @@ Go to https://desktop.github.com/ and download the appropriate version for your 
 
 ## 1.1 Initialize a new Repository
 To begin, we will create a new repository on our GitHub account.
-1. From the splash screen or the **File** menu, select **Create new repository**
+1. From the splash screen or the **File** menu, select **New Repository**
 
 2. Fill out the fields for the new repository to be created.
 	
@@ -19,7 +19,7 @@ To begin, we will create a new repository on our GitHub account.
 	
 	4. Most software projects require documentation, and the easiest place to do that in GitHub is in the "README.md" file. If you want to create this file when you create repository, check the box.
 	
-	5. The Git ignore file tells a repository what files it should not track. For LabVIEW, we probably don't want to track imported libaries, shared objects, executables, or metadata. These files can be identified as files to ignore using their file extensions in the Git ignore file. We could manually create this file later from scratch, but GitHub already provides a nice template for LabVIEW that includes all of the relevant file types to exclude.
+	5. Select **LabVIEW** in the **Git Ignore** dropdown. The Git ignore file tells a repository what files it should not track. For LabVIEW, we probably don't want to track imported libaries, shared objects, executables, or metadata. These files can be identified as files to ignore using their file extensions in the Git ignore file. We could manually create this file later from scratch, but GitHub already provides a nice template for LabVIEW that includes all of the relevant file types to exclude. 
 	
 	6. **You MUST provide a license for your code.** If you intend to share this code, you should select MIT License or Apache License 2.0. If you don't select a license, then your code is considered unlicensed and get you and your organization in legal hot water. **ALWAYS PROVIDE A LICENSE**.
 	
@@ -177,7 +177,7 @@ If we are the owners of the repo, we can merge our new branch directly with the 
 
 2. Use **Branch >> Merge into current branch** (CTRL+SHIFT+M).
 
-3. Select **Third-Sum-Edit** branch, which merges the changes made int he branch back into the **master** branch.
+3. Select **Third-Sum-Edit** branch, which merges the changes made in the branch back into the **master** branch.
 
 However, if multiple users have multiple branches, merging them all without a gatekeeping review process could result in issues, such as unwanted changes or overwriting someone else's work. We therefore want to create a pull request, which requests a merge with the master branch, and the merge will not be completed without approval from one of the repo's approvers.
 
