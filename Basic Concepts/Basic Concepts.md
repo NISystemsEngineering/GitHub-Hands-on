@@ -52,15 +52,15 @@ To begin, we will create a new repository on our GitHub account.
 Create a new file and commit it.
 1. Create a new simple LabVIEW VI in your local repository folder called "Hello World.vi".
 
-<kbd>
+
 ![](images/Hello_World_BD.png "Hello World.vi")
-</kbd>
+
 
 2. In Github Desktop, see in the Changes tab that the new file has been detected, but not yet committed. The green plus indicates that the file is new to the repo.
 
-<kbd>
+
 ![](images/New_VI.png "New VI Detected")
-</kbd>
+
 
 3. To commit the file to the repo:
 
@@ -70,27 +70,27 @@ Create a new file and commit it.
 	
 	3. Click **Commit to master** to complete the commit.
 	
-    <kbd>
+    
 	![](images/New_File_Commit.png "Commit New File")
-	</kbd>
+	
 
 ## 1.3 Committing Changes
 A commit is change to a file or set of files, it can be thought of as a revision.
 1. Make a change to the Hello World LabVIEW VI you created in 1.3. For example, change the string constant to a string control and connect the string control to the connector pane.
 
-<kbd>
-![](images/Hello_World_Mod_FP.png "Front Panel of Hello World.vi")
-</kbd>
 
-<kbd>
+![](images/Hello_World_Mod_FP.png "Front Panel of Hello World.vi")
+
+
+
 ![](images/Hello_World_Mod_BD.png "Block Diagram of Hello World.vi")
-</kbd>
+
 
 2. GitHub Desktop will automatically detect the changes made in the LabVIEW VI. These changes will be staged in the **Changes** tab. The yellow dot icon indicates that changes have been made to the file.
 
-<kbd>
+
 ![](images/Change_VI.png "Changes Reflected By Yellow Dot Icon")
-</kbd>
+
 
 3. Create another new LabVIEW VI, "Simple Add.vi". From GitHub Desktop staged changes, you will be able to see that the new file is also automatically detected and will show up with a green plus icon to indicate that it is a new file.
 
@@ -98,23 +98,23 @@ A commit is change to a file or set of files, it can be thought of as a revision
 
 	1. Commit **only** the change to "Hello World.vi" by unchecking the checkbox next to the "Simple Add.vi". Add summary and description and click **Commit to master**.
 	
-    <kbd>
+    
 	![](images/Commit_Hello_World_Change.png "Commit Changes to Hello World.vi")
-</kbd>
+
 	
 	2. Commit the remaining change, which adds "Simple Add.vi" to the repo.
 	
-    <kbd>
+    
 	![](images/Commit_Simple_Add.png "Commit New VI Simple Add.vi")
-	</kbd>
+	
 
 ## 1.4 History
 We can view information on past commits from GitHub Desktop.
 1. Click the **History** tab in GitHub Desktop and click on a commit to get more details about it.
 
-<kbd>
+
 ![](images/History_Numbered.png "History in GitHub Desktop")
-</kbd>
+
 
 1. Commit summary.
 2. Commit description.
@@ -131,9 +131,9 @@ GitHub.com is a web-based hosting service that we can push repositories to. This
 
 1. Click **Publish repository** to publish your repository to GitHub.com. GitHub desktop offers the option to keep your code private, but uncheck this, as private repos are only available to paying users on GitHub.com. Your repo will be viewable to the public after it is uploaded to the GitHub.com servers.
 
-<kbd>
+
 ![](images/Current_Branch.png "Publish Repository to GitHub.com")
-</kbd>
+
 
 Now, a copy of your repository (your project folder) has been "pushed" to the GitHub servers and is accessible to the public via GitHub.com. Go to your GitHub page online and observe the files that were created. A shortcut from GitHub Desktop to view the repo online in a browser is **Repository >> View on GitHub (CTRL+SHIFT+G)**. Now that it is hosted on GitHub.com, additional changes can be pushed from you as well as other users of GitHub. We will next cover how to manage access and conflicting changes.
 
@@ -146,17 +146,17 @@ If you are working on a project with multiple users making changes, you can see 
 
 2. We will edit the "README.md" file. GitHub.com provides a built-in text editing tool. This simulates a change to the repo that may have been pushed by another user. Click on "README.md" and then click the pencil icon on the right that launches the GitHub.com text editor. The file extension ".md" stands for Markdown, a lightweight markup language.
 
-<kbd>
+
 ![](images/Edit_in_GitHub.png "Edit Markdown file in GitHub")
-</kbd>
+
 
 3. Add text to the "README.md" file and commit your changes with the box below the editor. Note that we are still working in the branch **Third-Sum-Edit**.
 
 4. Go back to GitHub Desktop. You will see that the button that previously said **Fetch origin** now says **Pull origin**. Click this to apply the change to your local repo.
 
-<kbd>
+
 ![](images/Pull_Origin.png "Pull From Remote Repo")
-</kbd>
+
 
 5. Navigate to the "README.md" file on your computer and open it. You will see that the changes you made in GitHub.com are now reflected in this copy of the file as well. You can also see from the **History** tab that the revision has been added to the list of commits for the branch.
 
@@ -177,23 +177,23 @@ Allowing multiple users to push to a single remote repo in this manner will very
 Creating a branch creates a parallel version of the **master** (primary or default) branch. Making changes in this new branch will not disrupt the master branch, and the changes made in the new branch can be merged back into the master branch when the developer is ready.
 1. Create a new branch from GitHub Desktop with **Branch >> New branch** (CTRL+SHIFT+N). It will ask for a name, call it "Third-Sum-Edit". This will be the branch in which we add a new feature: Add a third number to the summation in Simple Add.vi.
 
-<kbd>
+
 ![](images/New_Branch_Third-Sum-Edit.png "Create New Branch")
-</kbd>
+
 
 2. Add a third number to the calculation in LabVIEW VI Simple Add.vi.
 
-<kbd>
+
 ![](images/Third_Sum_Edit_Simple_Add.png "Add Third Addend to Simple Add VI")
-</kbd>
+
 
 3. Commit the changes to the branch.
 	1. Check that you are in the correct branch from the top menu that reads "**Current branch**. It is very important that we commit to the correct branch, as committing to the **master** branch will edit the primary copy, and that may affect the other users accessing it.
 	2. Add a summary and description for the commit.
 	
-    <kbd>
+    
 	![](images/Commit_Third-Sum-Edit.png "Commit changes to Simple Add VI to the new branch Third-Sum-Edit.")
-	</kbd>
+	
 
 	3. Notice that the commit button now reads **Commit to Third-Sum-Edit**, instead of **Commit to master**. Commit to the branch.
 
@@ -218,17 +218,17 @@ However, if multiple users have multiple branches, merging them all without a ga
 
 3. The **Open a pull request** page should show that you are requesting a merge of **Third-Sum-Edit** into **master**. This means the **base:** is **master** and the **compare:** is **Third-Sum-Edit**.
 
-<kbd>
+
 ![](images/Merge_Branch.png "Confirm that you are merging the changes in Third-Sum-Edit into the master branch.")
-</kbd>
+
 
 4. Select **Create pull request**. See that this creates a forum where reviewer comments can be added. You can continue working and committing more changes to the pull request until it is approved by an approver, the pull request will update to reflect these additional commits as long as you continue to push them.
 
 5. In this case, we are owners of the repo, so we have reviewer privileges. Therefore, we are able to **Merge the pull request** on our own, and you can go ahead and do so. If you did not have reviewer privileges, the option would be disabled, as shown below.
 
-<kbd>
+
 ![](images/Review_Req.png "Merge will be disabled if you do not have approver privileges for the repo.")
-</kbd>
+
 
 6. Once you have merged the changes from **Third-Sum-Edit** into **master**, you can navigate to the **branches** tab and delete **Third-Sum-Edit**. A branch should be tied to a specific feature addition, bug fix, etc. Once this has been completed, it should be deleted and new branch started for the next section of work.
 
@@ -251,9 +251,9 @@ Fortunately, there is a way to separate compiled code from the source code of a 
 
 **Project Properties >> Project >> Separate compiled code from new project items**. Use **Mark Existing Items** to select which existing items you would like to have separated compiled code.
 
-<kbd>
+
 ![](images/Sep_Compiled_Code.png "Set this so that new project items are automatically set to separate their compiled code.")
-</kbd>
+
 
 When you check this option, LabVIEW will store the compiled code separately, in a compiled object cache on your local machine, rather than in the VI file that is in the repository. This enables Git to accurately detect which VIs have had code changes made to them.
 
@@ -273,9 +273,9 @@ We have discussed merging a branch into the master branch, but what about mergin
 
 While troublesome, there are tools to compare these sorts of conflicting changes in text-based coding. With graphical coding, this kind of file merge will present a larger challenge.
 
-<kbd>
+
 ![](images/MergeBattle.png "Issues arise when two users make changes to the same file.")
-</kbd>
+
 
 Merge "battles" should therefore be prevented whenever possible by avoiding simultaneous conflicting changes to the same file by multiple users. There are a few methods to prevent this.
 
@@ -285,15 +285,15 @@ By splitting code into different files, simultaneous development on one file can
 
 Bad:
 
-<kbd>
+
 ![](images/SpagCode.png "Gross.")
-</kbd>
+
 
 Good:
 
-<kbd>
+
 ![](images/GoodSubVICode.png "Well-organized, separated code that enables multiple users to work on one application simultaneously.")
-</kbd>
+
 
 See that in the "good" example, the code is separated in subVIs by function:
 * Application control, handles unexpected errors
@@ -317,24 +317,24 @@ It is best practice to tag in your commits the issue(s) that it addresses. GitHu
 
 Once the issue has been created in GitHub.com, ensure that your local repo is synced with the online repo (recall that this is done with **Fetch Origin**). Then, you will be able to tag the issue by typing #. This will bring up a list of the issues. Click on the relevant issue to insert the tag.
 
-<kbd>
+
 ![](images/TagIssue.png "Well-organized, separated code that enables multiple users to work on one application simultaneously.")
-</kbd>
+
 
 An additional tool that can be used is LabVIEW bookmarks.
 
 Bookmarks are created by the # tag in a free label, object label, wire label, or subdiagram label. Below, the tag "#NOTE: Report, put don't pass error. Run every command."" has been created.
 
-<kbd>
+
 ![](images/BookmarkEx.png "Create a bookmark with the # tag.")
-</kbd>
+
 
 All bookmarks can be viewed in the Bookmark Manager. This can even be launched from a project, which displays bookmarks in all VIs in the project.
 **View >> Bookmark Manager**
 
-<kbd>
+
 ![](images/BookmarkManager.png "View all bookmarks.")
-</kbd>
+
 
 Come up with a system to help other team members easily identify fixes that must be made within existing LabVIEW code. In the above system, these tags are used for the following functions:
 * **#BUG** denotes where an issue may be referring to
