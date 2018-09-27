@@ -237,7 +237,7 @@ Congratulations! You now know the basics of using Git source control with GitHub
 ## 2.0 Using LabVIEW and Git
 There are a few things to be aware of when using LabVIEW with Git.
 
-## Separating Compiled Code from VIs
+### Separating Compiled Code from VIs
 
 By default, a VI stores two types of code together:
 * Graphical source code that you edit in the LabVIEW development environment
