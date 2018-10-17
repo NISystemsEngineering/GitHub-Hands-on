@@ -172,7 +172,7 @@ If you are working on a project with multiple users making changes, you can see 
 ![](images/Edit_in_GitHub.png "Edit Markdown file in GitHub")
 
 
-3. Add text to the "README.md" file and commit your changes with the box below the editor. Note that we are still working in the branch **Third-Sum-Edit**.
+3. Add text to the "README.md" file and commit your changes with the box below the editor. Note that we are still working in the branch **master**.
 
 4. Go back to GitHub Desktop. You will see that the button that previously said **Fetch origin** now says **Pull origin**. Click this to apply the change to your local repo.
 
