@@ -3,6 +3,25 @@
 ## About this document
 This document is tracked using [Semantic Versioning 2.0](https://semver.org/), and the current version is 1.0.0.
 
+<!-- TOC depthFrom:2 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [About this document](#about-this-document)
+- [Before You begin](#before-you-begin)
+- [Initialize a new Repository](#initialize-a-new-repository)
+- [Adding a File to the Repo (Initial Commit)](#adding-a-file-to-the-repo-initial-commit)
+- [Committing Changes](#committing-changes)
+- [History](#history)
+- [Publishing Your Repository to GitHub.com](#publishing-your-repository-to-githubcom)
+- [Fetching and Pulling](#fetching-and-pulling)
+- [Pushing](#pushing)
+- [Branches](#branches)
+- [Merging Branches and Pull Requests](#merging-branches-and-pull-requests)
+- [Using LabVIEW and Git](#using-labview-and-git)
+- [Separating Compiled Code from VIs](#separating-compiled-code-from-vis)
+- [Additional Resources](#additional-resources)
+
+<!-- /TOC -->
+
 ## Before You begin
 
 ### Create a GitHub Account
@@ -11,7 +30,7 @@ If you don't already have a GitHub account, go to https://github.com and create 
 ### Download GitHub Desktop
 Go to https://desktop.github.com/ and download the appropriate version for your OS.
 
-## 1.1 Initialize a new Repository
+## Initialize a new Repository
 To begin, we will create a new repository on our GitHub account.
 1. From the splash screen or the **File** menu, select **New Repository**
 
@@ -54,7 +73,7 @@ To begin, we will create a new repository on our GitHub account.
 *.lvlps
 ```
 
-## 1.2 Adding a File to the Repo (Initial Commit)
+## Adding a File to the Repo (Initial Commit)
 Create a new file and commit it.
 1. Create a new simple LabVIEW VI in your local repository folder called "Hello World.vi".
 
@@ -74,7 +93,7 @@ Create a new file and commit it.
 
 	![](images/New_File_Commit.png "Commit New File")
 
-## 1.3 Committing Changes
+## Committing Changes
 A commit is change to a file or set of files, it can be thought of as a revision.
 1. Make a change to the Hello World LabVIEW VI you created in 1.3. For example, change the string constant to a string control and connect the string control to the connector pane.
 
@@ -98,7 +117,7 @@ A commit is change to a file or set of files, it can be thought of as a revision
 
 	![](images/Commit_Simple_Add.png "Commit New VI Simple Add.vi")
 
-## 1.4 History
+## History
 We can view information on past commits from GitHub Desktop.
 1. Click the **History** tab in GitHub Desktop and click on a commit to get more details about it.
 
@@ -112,7 +131,7 @@ We can view information on past commits from GitHub Desktop.
 
 Right-clicking on an item in the **History** tab gives you the option to revert the commit. This should be used with caustion, as it undoes all changes since the previous commit, reverting your files back to a previous version. This option is also available via right-click from changes staged in the **Changes** tab.
 
-## 1.5 Publishing Your Repository to GitHub.com
+## Publishing Your Repository to GitHub.com
 You have already heard of GitHub.com, where you created your GitHub account. Up until this point, what we have been doing is using the version control software Git to track changes on our computer. This makes our computer into a Git server. The files still only exist in one place: On our machine.
 
 GitHub.com is a web-based hosting service that we can push repositories to. This explores additional benefits of using Git besides change tracking, such as:
@@ -125,7 +144,7 @@ GitHub.com is a web-based hosting service that we can push repositories to. This
 
 Now, a copy of your repository (your project folder) has been "pushed" to the GitHub servers and is accessible to the public via GitHub.com. Go to your GitHub page online and observe the files that were created. A shortcut from GitHub Desktop to view the repo online in a browser is **Repository >> View on GitHub (CTRL+SHIFT+G)**. Now that it is hosted on GitHub.com, additional changes can be pushed from you as well as other users of GitHub. We will next cover how to manage access and conflicting changes.
 
-## 1.6 Fetching and Pulling
+## Fetching and Pulling
 Notice the top bar now says **Fetch origin** with a time. Fetching means detecting the latest changes from an online repo, but it does not automatically merge these changes into the local repo. With the "last fetched" time, GitHub Desktop is indicating to us the time that it last connected with the GitHub.com repository. When it detects changes, it will give you the option to pull. Pulling (**Repository >> Pull**) will take changes from the remote online repo and apply them to your local repo files.
 
 If you are working on a project with multiple users making changes, you can see how it is very crucial that you pull from the main repository that everyone is working from before starting your own changes (e.g. adding a feature or fixing a bug). Otherwise, you may not be working with the most up-to-date version of the project. We will illustrate this by making a change in the repository hosted on GitHub.com and seeing how pulling looks in the GitHub Desktop application on your computer following these changes.
@@ -144,7 +163,7 @@ If you are working on a project with multiple users making changes, you can see 
 
 5. Navigate to the "README.md" file on your computer and open it. You will see that the changes you made in GitHub.com are now reflected in this copy of the file as well. You can also see from the **History** tab that the revision has been added to the list of commits for the branch.
 
-## 1.7 Pushing
+## Pushing
 Up until this point we have explored how to pull the most up-to-date version of the remote repo onto your computer. The next step is to make a change to your local repo and push it back to the remote repo.
 
 1. Open "README.md" in your local repo. Add text to the file and save the changes.
@@ -157,7 +176,7 @@ Up until this point we have explored how to pull the most up-to-date version of 
 
 Allowing multiple users to push to a single remote repo in this manner will very quickly start to get messy. It creates the possibility of overwriting someone else's changes. Next, we introduce branches and pull requests as methods to control access to a repo and organize changes made by multiple users working on one repo.
 
-## 1.8 Branches
+## Branches
 Creating a branch creates a parallel version of the **master** (primary or default) branch. Making changes in this new branch will not disrupt the master branch, and the changes made in the new branch can be merged back into the master branch when the developer is ready.
 1. Create a new branch from GitHub Desktop with **Branch >> New branch** (CTRL+SHIFT+N). It will ask for a name, call it "Third-Sum-Edit". This will be the branch in which we add a new feature: Add a third number to the summation in Simple Add.vi.
 
@@ -179,7 +198,7 @@ Creating a branch creates a parallel version of the **master** (primary or defau
 
 5. Publish branch to GitHub.com with the **Publish branch** button. Then, go to the online repo and you will be able to see from Code >> 2 branches that your new branch is now present in this repo as well. However, it is still separate from the master branch. You will have to merge the Third-Sum-Edit branch with the master branch for the changes to be reflected there.
 
-## 1.9 Merging Branches and Pull Requests
+## Merging Branches and Pull Requests
 If we are the owners of the repo, we can merge our new branch directly with the **master** branch without additional review. This would be done with the following procedure:
 
 1. Navigate to the **master** branch. Note that it is very important that you do this from the **master** branch, so that the **master** remains the primary/default branch.
@@ -208,7 +227,7 @@ However, if multiple users have multiple branches, merging them all without a ga
 
 Congratulations! You now know the basics of using Git source control with GitHub.com and GitHub Desktop.
 
-## 2.0 Using LabVIEW and Git
+## Using LabVIEW and Git
 There are a few things to be aware of when using LabVIEW with Git.
 
 ## Separating Compiled Code from VIs
