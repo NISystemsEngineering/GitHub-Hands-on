@@ -17,10 +17,11 @@ This document is tracked using [Semantic Versioning 2.0](https://semver.org/), a
 - [Branches](#branches)
 - [Merging Branches and Pull Requests](#merging-branches-and-pull-requests)
 - [Using LabVIEW and Git](#using-labview-and-git)
-- [Separating Compiled Code from VIs](#separating-compiled-code-from-vis)
 - [Additional Resources](#additional-resources)
 
 <!-- /TOC -->
+
+******
 
 ## Before You begin
 
@@ -72,6 +73,8 @@ To begin, we will create a new repository on our GitHub account.
 *.aliases
 *.lvlps
 ```
+
+******
 
 ## Adding a File to the Repo (Initial Commit)
 Create a new file and commit it.
@@ -131,6 +134,8 @@ We can view information on past commits from GitHub Desktop.
 
 Right-clicking on an item in the **History** tab gives you the option to revert the commit. This should be used with caustion, as it undoes all changes since the previous commit, reverting your files back to a previous version. This option is also available via right-click from changes staged in the **Changes** tab.
 
+******
+
 ## Publishing Your Repository to GitHub.com
 You have already heard of GitHub.com, where you created your GitHub account. Up until this point, what we have been doing is using the version control software Git to track changes on our computer. This makes our computer into a Git server. The files still only exist in one place: On our machine.
 
@@ -143,6 +148,8 @@ GitHub.com is a web-based hosting service that we can push repositories to. This
 ![](images/Current_Branch.png "Publish Repository to GitHub.com")
 
 Now, a copy of your repository (your project folder) has been "pushed" to the GitHub servers and is accessible to the public via GitHub.com. Go to your GitHub page online and observe the files that were created. A shortcut from GitHub Desktop to view the repo online in a browser is **Repository >> View on GitHub (CTRL+SHIFT+G)**. Now that it is hosted on GitHub.com, additional changes can be pushed from you as well as other users of GitHub. We will next cover how to manage access and conflicting changes.
+
+******
 
 ## Fetching and Pulling
 Notice the top bar now says **Fetch origin** with a time. Fetching means detecting the latest changes from an online repo, but it does not automatically merge these changes into the local repo. With the "last fetched" time, GitHub Desktop is indicating to us the time that it last connected with the GitHub.com repository. When it detects changes, it will give you the option to pull. Pulling (**Repository >> Pull**) will take changes from the remote online repo and apply them to your local repo files.
@@ -163,6 +170,8 @@ If you are working on a project with multiple users making changes, you can see 
 
 5. Navigate to the "README.md" file on your computer and open it. You will see that the changes you made in GitHub.com are now reflected in this copy of the file as well. You can also see from the **History** tab that the revision has been added to the list of commits for the branch.
 
+******
+
 ## Pushing
 Up until this point we have explored how to pull the most up-to-date version of the remote repo onto your computer. The next step is to make a change to your local repo and push it back to the remote repo.
 
@@ -175,6 +184,8 @@ Up until this point we have explored how to pull the most up-to-date version of 
 4. Open the repo hosted on GitHub.com (CTRL+SHIFT+G) and see that the changes you made are reflected in the "README.md" file there.
 
 Allowing multiple users to push to a single remote repo in this manner will very quickly start to get messy. It creates the possibility of overwriting someone else's changes. Next, we introduce branches and pull requests as methods to control access to a repo and organize changes made by multiple users working on one repo.
+
+******
 
 ## Branches
 Creating a branch creates a parallel version of the **master** (primary or default) branch. Making changes in this new branch will not disrupt the master branch, and the changes made in the new branch can be merged back into the master branch when the developer is ready.
@@ -197,6 +208,8 @@ Creating a branch creates a parallel version of the **master** (primary or defau
 4. From the **Current Branch** menu on the top bar, switch back to **master** branch and view the **History** tab. There, you can confirm that these changes we committed to the branch are not reflected in the **master** branch. Be sure to switch back to **Third-Sum-Edit** branch before continuing, as we want to keep working in this branch. Note that we can only switch branches when all changes have been committed (no changes are staged).
 
 5. Publish branch to GitHub.com with the **Publish branch** button. Then, go to the online repo and you will be able to see from Code >> 2 branches that your new branch is now present in this repo as well. However, it is still separate from the master branch. You will have to merge the Third-Sum-Edit branch with the master branch for the changes to be reflected there.
+
+******
 
 ## Merging Branches and Pull Requests
 If we are the owners of the repo, we can merge our new branch directly with the **master** branch without additional review. This would be done with the following procedure:
@@ -227,10 +240,12 @@ However, if multiple users have multiple branches, merging them all without a ga
 
 Congratulations! You now know the basics of using Git source control with GitHub.com and GitHub Desktop.
 
+******
+
 ## Using LabVIEW and Git
 There are a few things to be aware of when using LabVIEW with Git.
 
-## Separating Compiled Code from VIs
+### Separating Compiled Code from VIs
 
 By default, a VI stores two types of code together:
 * Graphical source code that you edit in the LabVIEW development environment
@@ -323,6 +338,8 @@ Come up with a system to help other team members easily identify fixes that must
 Resources
 * [Bookmark Manager](http://zone.ni.com/reference/en-XX/help/371361K-01/lvdialog/bkmk_manager_moreinfo/)
 * [5 Things You Need to Know About LabVIEW Bookmarks](https://forums.ni.com/t5/LabVIEW-News/5-Things-You-Need-to-Know-About-LabVIEW-Bookmarks/ba-p/3486903)
+
+******
 
 ## Additional Resources
 * [GitHub Glossary](https://help.github.com/articles/github-glossary/)
