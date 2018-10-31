@@ -3,6 +3,8 @@
 ## About this document
 This document is tracked using [Semantic Versioning 2.0](https://semver.org/), and the current version is 1.0.0.
 
+*****
+
 <!-- TOC depthFrom:2 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [About this document](#about-this-document)
