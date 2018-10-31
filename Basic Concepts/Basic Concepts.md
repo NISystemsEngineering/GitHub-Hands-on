@@ -5,9 +5,11 @@ This document is tracked using [Semantic Versioning 2.0](https://semver.org/), a
 
 *****
 
+## Table of Contents
 <!-- TOC depthFrom:2 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [About this document](#about-this-document)
+- [Table of Contents](#table-of-contents)
 - [Before You begin](#before-you-begin)
 - [Initialize a new Repository](#initialize-a-new-repository)
 - [Adding a File to the Repo (Initial Commit)](#adding-a-file-to-the-repo-initial-commit)
