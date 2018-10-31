@@ -1,7 +1,7 @@
 # Basic Concepts
 
 ## About this document
-This document is tracked using [Semantic Versioning 2.0](https://semver.org/), and the current version is 1.0.0
+This document is tracked using [Semantic Versioning 2.0](https://semver.org/), and the current version is 1.0.0.
 
 ## Before You begin
 
