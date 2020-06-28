@@ -6,7 +6,9 @@ If you don't already have a GitHub account, go to https://github.com and create 
 Go to https://desktop.github.com/ and download the appropriate version for your OS.
 
 ## 1.1 Initialize a new Repository
-To begin, we will create a new repository on our GitHub account.
+To begin, we will create a new repository in the GitHub Desktop app, make some
+changes, then publish it to your GitHub profile in section 1.5.
+
 1. From the splash screen or the **File** menu, select **New Repository**
 
 2. Fill out the fields for the new repository to be created.
